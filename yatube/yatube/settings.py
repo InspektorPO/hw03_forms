@@ -1,5 +1,6 @@
 import os
 
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = '$5s&p3xk$p8i+49bv!(@f6#i*25z&pf6$f3vvn0q8u(48_2q#0'
@@ -45,7 +46,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'core.context_processors.year.year',
             ],
         },
     },
@@ -98,3 +98,5 @@ LOGIN_REDIRECT_URL = 'posts:index'
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 
 EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'sent_emails')
+
+PAGE = 10

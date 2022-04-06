@@ -1,7 +1,7 @@
 {% extends "base.html" %} 
     {% block content %} 
         {% block header %}
-        <h1>{{ group.title }}</h1>
+        {% block tittle %}<h1>{{ group.title }}</h1>{% endblock %}
         <p>{{ group.description }}</p>
         {% endblock %}
         {% for post in page_obj %}

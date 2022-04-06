@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
-{% block tittle %}Пост {{ post.text|truncatechars:30 }}{% endblock %}
-{% block content %}  
+{% block content %}
+{% block tittle %}
+<h2>Детальная информация {{ post.text|truncatechars:30 }}</h2>
+{% endblock %}  
 <div class="row">
   <aside class="col-12 col-md-3">
     <ul class="list-group list-group-flush">
@@ -33,7 +35,7 @@
         </article>
       </div>
       {% if request.user == post.author %}
-            <a class="btn btn-primary" href="{% url 'posts:post_edit' post.pk%}">
+            <a class="btn btn-primary" href="{% url 'posts:post_edit' post.id %}">
               редактировать запись
             </a>
           {% endif %} 

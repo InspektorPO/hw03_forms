@@ -1,6 +1,6 @@
 {% extends "base.html" %} 
-      {% block content %}  
-        <h1>Последние обновления на сайте</h1>      
+{% block content %}  
+{% block tittle %}<h1>Последние обновления на сайте</h1>{% endblock %}   
         <article> 
         {% for post in page_obj %} 
           {% include 'includes/post.html' %} 
