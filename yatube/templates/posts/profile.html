@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
-{% block content %}
-{% block tittle %}
-<h1>Профайл пользователя {{ author.get_full_name }}</h1>
-{% endblock %}      
-  <h3>Всего постов: {{ posts_numbers }} </h3>   
+{% block title %}
+Профайл пользователя {{ author.get_full_name }}
+{% endblock %}
+{% block content %}      
+<h1>Профайл пользователя {{ author.get_full_name }}</h1>  
+<h3>Всего постов: {{ posts_numbers }}</h3>   
     <article>
       {% for author_post in page_obj %}
         <ul>

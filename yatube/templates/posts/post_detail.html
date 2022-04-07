@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
+{% block title %}
+    Детальная информация {{ post.text|truncatechars:30 }}
+  {% endblock %}
 {% block content %}
-{% block tittle %}
 <h2>Детальная информация {{ post.text|truncatechars:30 }}</h2>
-{% endblock %}  
 <div class="row">
   <aside class="col-12 col-md-3">
     <ul class="list-group list-group-flush">
@@ -11,7 +12,7 @@
       </li>
       {% if post.group %}
               <li class="list-group-item">
-                Группа: {{ post.group }}
+                Группа: {{ post.group.title }}
                 <a href="{% url 'posts:group_post' post.group.slug %}">
                   все записи группы
                 </a>
